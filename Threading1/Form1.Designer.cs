@@ -36,8 +36,13 @@
             this.materialCheckBox4 = new MaterialSkin.Controls.MaterialCheckBox();
             this.materialCheckBox5 = new MaterialSkin.Controls.MaterialCheckBox();
             this.materialCheckBox6 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.Grid = new System.Windows.Forms.DataGridView();
+            this.Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ResultLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.Logs = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -162,14 +167,6 @@
             this.materialCheckBox6.Text = "Hight";
             this.materialCheckBox6.UseVisualStyleBackColor = true;
             // 
-            // progressBar1
-            // 
-            this.progressBar1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.progressBar1.Location = new System.Drawing.Point(28, 227);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(236, 23);
-            this.progressBar1.TabIndex = 8;
-            // 
             // materialFlatButton1
             // 
             this.materialFlatButton1.AutoSize = true;
@@ -186,13 +183,64 @@
             this.materialFlatButton1.UseVisualStyleBackColor = true;
             this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
+            // Grid
+            // 
+            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column});
+            this.Grid.Location = new System.Drawing.Point(293, 84);
+            this.Grid.Name = "Grid";
+            this.Grid.Size = new System.Drawing.Size(152, 315);
+            this.Grid.TabIndex = 10;
+            // 
+            // Column
+            // 
+            this.Column.HeaderText = "Processes";
+            this.Column.Name = "Column";
+            // 
+            // ResultLabel
+            // 
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Depth = 0;
+            this.ResultLabel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ResultLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ResultLabel.Location = new System.Drawing.Point(136, 333);
+            this.ResultLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(0, 19);
+            this.ResultLabel.TabIndex = 11;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(30, 333);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(58, 19);
+            this.materialLabel4.TabIndex = 12;
+            this.materialLabel4.Text = "Current";
+            // 
+            // Logs
+            // 
+            this.Logs.FormattingEnabled = true;
+            this.Logs.Location = new System.Drawing.Point(451, 84);
+            this.Logs.Name = "Logs";
+            this.Logs.Size = new System.Drawing.Size(254, 316);
+            this.Logs.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 307);
+            this.ClientSize = new System.Drawing.Size(717, 420);
+            this.Controls.Add(this.Logs);
+            this.Controls.Add(this.materialLabel4);
+            this.Controls.Add(this.ResultLabel);
+            this.Controls.Add(this.Grid);
             this.Controls.Add(this.materialFlatButton1);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.materialCheckBox4);
             this.Controls.Add(this.materialCheckBox5);
             this.Controls.Add(this.materialCheckBox6);
@@ -203,6 +251,8 @@
             this.Controls.Add(this.materialLabel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_Closing);
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,8 +268,12 @@
         private MaterialSkin.Controls.MaterialCheckBox materialCheckBox4;
         private MaterialSkin.Controls.MaterialCheckBox materialCheckBox5;
         private MaterialSkin.Controls.MaterialCheckBox materialCheckBox6;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+        public System.Windows.Forms.DataGridView Grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column;
+        public MaterialSkin.Controls.MaterialLabel ResultLabel;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private System.Windows.Forms.ListBox Logs;
     }
 }
 
